@@ -6,7 +6,7 @@
 # catalog-version 2.00
 Name:		texlive-ltxfileinfo
 Version:	2.00
-Release:	1
+Release:	1.1
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
@@ -17,7 +17,9 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-ltxfileinfo.bin
+# FIXME until finished updating texlive
+Provides:	texlive-ltxfileinfo.bin
+#Requires:	texlive-ltxfileinfo.bin
 
 %description
 The bash script ltxfileinfo prints information about a LaTeX
