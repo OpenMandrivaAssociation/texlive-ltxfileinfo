@@ -6,7 +6,7 @@
 # catalog-version 2.00
 Name:		texlive-ltxfileinfo
 Version:	2.00
-Release:	1.1
+Release:	2
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
@@ -17,9 +17,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-# FIXME until finished updating texlive
-Provides:	texlive-ltxfileinfo.bin
-#Requires:	texlive-ltxfileinfo.bin
+Provides:	texlive-ltxfileinfo.bin = %{EVRD}
 
 %description
 The bash script ltxfileinfo prints information about a LaTeX
@@ -40,6 +38,7 @@ developers, to make errors in those statements visible.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/ltxfileinfo
 %{_texmfdistdir}/scripts/ltxfileinfo/ltxfileinfo
 %doc %{_texmfdistdir}/doc/support/ltxfileinfo/README
 %doc %{_texmfdistdir}/doc/support/ltxfileinfo/ltxfileinfo.pdf
@@ -51,5 +50,9 @@ developers, to make errors in those statements visible.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/scripts/ltxfileinfo/ltxfileinfo ltxfileinfo
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
