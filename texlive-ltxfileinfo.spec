@@ -1,12 +1,12 @@
-# revision 29349
+# revision 33670
 # category Package
 # catalog-ctan /support/ltxfileinfo
-# catalog-date 2013-02-05 06:50:41 +0100
+# catalog-date 2014-04-24 15:36:27 +0200
 # catalog-license gpl
-# catalog-version 2.00
+# catalog-version 2.01
 Name:		texlive-ltxfileinfo
-Version:	2.00
-Release:	8
+Version:	2.01
+Release:	1
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
