@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version 2.01
 Name:		texlive-ltxfileinfo
-Version:	2.01
-Release:	4
+Version:	2.04
+Release:	1
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
