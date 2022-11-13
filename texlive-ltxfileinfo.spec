@@ -1,18 +1,12 @@
-# revision 33670
-# category Package
-# catalog-ctan /support/ltxfileinfo
-# catalog-date 2014-04-24 15:36:27 +0200
-# catalog-license gpl
-# catalog-version 2.01
 Name:		texlive-ltxfileinfo
-Version:	2.04
-Release:	2
+Version:	38663
+Release:	1
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ in these \Provides... statements and it has options, useful for
 developers, to make errors in those statements visible.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,14 +39,14 @@ developers, to make errors in those statements visible.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/ltxfileinfo/ltxfileinfo ltxfileinfo
+ln -sf %{_texmfdistdir}/scripts/ltxfileinfo/ltxfileinfo ltxfileinfo
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
