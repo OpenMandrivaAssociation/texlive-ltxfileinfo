@@ -1,6 +1,6 @@
 Name:		texlive-ltxfileinfo
 Version:	38663
-Release:	1
+Release:	2
 Summary:	Print version info for latex class or style file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
