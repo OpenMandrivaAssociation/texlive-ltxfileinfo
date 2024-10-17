@@ -3,7 +3,7 @@ Version:	38663
 Release:	2
 Summary:	Print version info for latex class or style file
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/ltxfileinfo
+URL:		https://www.ctan.org/tex-archive/support/ltxfileinfo
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ltxfileinfo.doc.r%{version}.tar.xz
